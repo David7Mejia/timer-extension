@@ -20,5 +20,14 @@ chrome.alarms.onAlarm.addListener(alarm => {
     chrome.action.setBadgeText({
       text: `${time + 1}`,
     });
+    chrome.storage.sync.get(["notificationTime"], res => {
+      const notificationTime = res.notificationTime ?? 1000;
+      // if (time % 10 == 0) {
+      //   this.registration.showNotification("Timer", {
+      //     body: `${notificationTime / 10} seconds has passed `,
+      //     icon: "icon.png",
+      //   });
+      // }
+    });
   });
 });

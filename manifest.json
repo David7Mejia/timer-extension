@@ -1,0 +1,27 @@
+{
+  "name": "Timer Extension v1",
+  "version": "1.0.0",
+  "description": "A basic timer extension",
+  "manifest_version": 3,
+  "icons": {
+    "48": "clock.png",
+    "128": "clock.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default-icon": {
+      "clock.png": {
+        "16": "clock.png",
+        "24": "clock.png",
+        "32": "clock.png"
+      }
+    },
+    "default-title": "Timer extension Action Title",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "alarms"]
+}
